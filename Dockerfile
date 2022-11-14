@@ -33,12 +33,6 @@ RUN $(find /usr/local/texlive -name tlmgr) path remove \
       -repository ${TEXLIVE_MIRROR} \
     \
 &&  $(find /usr/local/texlive -name tlmgr) path add \
-&&  tlmgr install --repository ${TEXLIVE_MIRROR} \
-      latexmk \
-      texcount \
-      synctex \
-    \
-&&  tlmgr path add \
 &&  rm -rf /install-tl-unx
 
 # Install Fonts
