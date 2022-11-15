@@ -36,16 +36,12 @@ RUN $(find /usr/local/texlive -name tlmgr) path remove \
 &&  rm -rf /install-tl-unx
 
 # Install Fonts
-RUN apt-get update && apt-get install xfonts-wqy python3-pygments inkscape fonts-font-awesome -y
 
 COPY ./fonts /usr/share/
 
-RUN cd /usr/share/fonts
-
-RUN mkfontscale
-
-RUN mkfontdir
-
-RUN fc-cache -fv
-
-RUN fc-list :lang=zh-cn
+RUN apt-get update && apt-get install xfonts-wqy python3-pygments inkscape fonts-font-awesome -y \
+&&  cd /usr/share/fonts    \
+&&  mkfontscale            \
+&&  mkfontdir              \
+&&  fc-cache -fv           \
+&&  fc-list :lang=zh-cn    \
