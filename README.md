@@ -8,4 +8,6 @@ Users just need to change the share latex image tag from `sharelatex/sharelatex`
 sed -i 's/image_name="sharelatex/image_name="siaimes/' ./bin/docker-compose
 ```
 
+After 2023/03/20, users just need to add env `SHARELATEX_IMAGE_NAME=siaimes/sharelatex` in `config/overleaf.rc`。
+
 If [version](https://github.com/overleaf/toolkit/blob/master/lib/config-seed/version#L1) of sharelatex updated, please let me know.
