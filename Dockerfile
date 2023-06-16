@@ -1,4 +1,4 @@
-FROM sharelatex/sharelatex:4.0.1
+FROM sharelatex/sharelatex:4.0.2
 
 # Install TexLive
 # ---------------
